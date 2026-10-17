@@ -182,6 +182,10 @@ section{position:relative;padding-block:clamp(72px,10vw,140px)}
 .tl{position:relative;padding:26px 0 30px 34px;display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:8px 28px}
 .tl::before{content:"";position:absolute;left:-6px;top:36px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--saffron);box-shadow:0 0 0 5px color-mix(in srgb, var(--saffron) 18%, transparent)}
 .tl.edu::before{border-color:var(--teal);box-shadow:0 0 0 5px color-mix(in srgb, var(--teal) 18%, transparent)}
+.tl.cert::before{background:var(--teal);border-color:var(--teal);box-shadow:0 0 0 5px color-mix(in srgb, var(--teal) 18%, transparent)}
+.tl.cert.wip::before{background:var(--bg);border-color:var(--saffron);box-shadow:0 0 0 5px color-mix(in srgb, var(--saffron) 18%, transparent)}
+.tl.cert .org{color:var(--teal)}
+.tl.cert.wip .when{color:var(--saffron)}
 .tl + .tl{border-top:1px solid var(--line)}
 .tl .when{color:var(--muted);font-family:var(--font-mono);font-size:.8rem;letter-spacing:.04em;padding-top:5px}
 .tl h3{font-size:1.45rem;line-height:1.2}
@@ -249,18 +253,6 @@ dialog.lb::backdrop{background:color-mix(in srgb, var(--bg) 85%, transparent);ba
 @media (max-width:960px){ .tools{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:480px){ .tools{grid-template-columns:1fr} }
 
-/* ---------- certs ---------- */
-.certs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px}
-.cert{position:relative;padding:26px 24px;border-radius:20px;border:1px solid var(--line);background:var(--surface);backdrop-filter:blur(12px);display:grid;gap:12px;align-content:start;min-width:0;overflow:hidden;transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .3s}
-.cert:hover{transform:translateY(-4px);border-color:var(--line-2)}
-.cert::before{content:"";position:absolute;inset:auto -40px -60px auto;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb, var(--saffron) 22%, transparent),transparent 70%);pointer-events:none}
-.cert h3{font-size:1.3rem;line-height:1.25}
-.cert .by{color:var(--fg-2);font-size:.92rem}
-.cert .status{justify-self:start;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:6px;border:1px solid var(--line-2)}
-.cert .status.done{color:var(--teal);border-color:color-mix(in srgb, var(--teal) 45%, transparent)}
-.cert .status.wip{color:var(--saffron);border-color:color-mix(in srgb, var(--saffron) 45%, transparent)}
-.cert ul{margin:0;padding-left:18px;color:var(--fg-2);font-size:.9rem;display:grid;gap:4px}
-@media (max-width:960px){ .certs{grid-template-columns:1fr} }
 
 /* ---------- contact ---------- */
 .contact{padding-bottom:clamp(60px,8vw,110px)}
@@ -404,8 +396,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <!-- ===== EXPERIENCE ===== -->
   <section id="experience">
     <div class="wrap">
-      <p class="eyebrow mono reveal">Experience &amp; education</p>
-      <h2 class="section-title reveal">Two years of insight work, one <em>degree</em> in progress.</h2>
+      <p class="eyebrow mono reveal">Experience, education &amp; certifications</p>
+      <h2 class="section-title reveal">Two years of insight work, a <em>degree</em> in progress, three certifications.</h2>
       <div class="two-col">
         <div class="timeline reveal">
           <article class="tl">
@@ -460,20 +452,31 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
               <div class="org">Institute of Business Management, Karachi</div>
             </div>
           </article>
-          <article class="tl edu">
-            <div class="when">Aug – Dec 2024</div>
+          <article class="tl cert">
+            <div class="when">Completed</div>
             <div>
-              <h3>Dognition performance insights</h3>
-              <div class="org">Tableau coursework project</div>
-              <ul><li>Analysed organisational performance data and built a Tableau story to communicate where users drop off.</li></ul>
+              <h3>IBM Data Analyst Professional Certificate</h3>
+              <div class="org">IBM, via Coursera</div>
+              <ul>
+                <li>Databases &amp; SQL for Data Science</li>
+                <li>Data Analysis with Python</li>
+                <li>Data Visualization with Python</li>
+                <li>Data Visualization &amp; Communication with Tableau</li>
+              </ul>
             </div>
           </article>
-          <article class="tl edu">
-            <div class="when">2023 – 2024</div>
+          <article class="tl cert">
+            <div class="when">Completed</div>
             <div>
-              <h3>Exploratory data analysis in Python</h3>
-              <div class="org">Independent projects</div>
-              <ul><li>Employee performance scores and used-device pricing, from cleaning to Pearson correlation and visualisation.</li></ul>
+              <h3>AWS Certified Cloud Practitioner</h3>
+              <div class="org">Amazon Web Services</div>
+            </div>
+          </article>
+          <article class="tl cert wip">
+            <div class="when">In progress</div>
+            <div>
+              <h3>Supervised Machine Learning: Regression and Classification</h3>
+              <div class="org">Stanford University &amp; DeepLearning.AI</div>
             </div>
           </article>
         </div>
@@ -526,32 +529,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </div>
   </section>
 
-  <!-- ===== CERTIFICATIONS ===== -->
-  <section id="certs" style="padding-top:0">
-    <div class="wrap">
-      <p class="eyebrow mono reveal">Certifications</p>
-      <div class="certs reveal">
-        <article class="cert">
-          <span class="status done">Completed</span>
-          <h3>IBM Data Analyst Professional Certificate</h3>
-          <p class="by">IBM, via Coursera</p>
-          <ul><li>Databases &amp; SQL for Data Science</li><li>Data Analysis with Python</li><li>Data Visualization with Python</li><li>Data Visualization &amp; Communication with Tableau</li><li>Capstone: developer survey dashboards in Cognos and Looker Studio</li></ul>
-        </article>
-        <article class="cert">
-          <span class="status done">Completed</span>
-          <h3>AWS Certified Cloud Practitioner</h3>
-          <p class="by">Amazon Web Services</p>
-          <ul><li>Cloud concepts, security and compliance</li><li>Core AWS services and pricing models</li></ul>
-        </article>
-        <article class="cert">
-          <span class="status wip">In progress</span>
-          <h3>Supervised Machine Learning: Regression and Classification</h3>
-          <p class="by">Stanford University &amp; DeepLearning.AI</p>
-          <ul><li>Linear and logistic regression</li><li>Gradient descent, regularisation</li></ul>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="contact">
