@@ -1,6 +1,6 @@
-# Static site: no build step, serve the docs/ folder as the site root.
+# Static site served from the repository root: index.html + assets/. No build step.
 [build]
-  publish = "docs"
+  publish = "."
   command = ""
 
 [[headers]]

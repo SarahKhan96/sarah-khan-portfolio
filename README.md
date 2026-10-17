@@ -1,6 +1,6 @@
 # Data-Analysis Projects and Dashboards
 
-🌐 **Live portfolio website:** https://sarahkhan96.github.io/sarah-khan-portfolio/ (source in the [`docs/`](docs/) folder)
+🌐 **Live portfolio website:** https://sarahkhan96.github.io/sarah-khan-portfolio/ (source: `index.html` and `assets/` in this repo)
 ### Hi I am Sarah Khan, I am happy to welcome you. Here you can find my projects I have done so far.
 
 ## Tableau Projects
