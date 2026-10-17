@@ -6,7 +6,7 @@
 <!--A-->
 <title>Sarah Khan</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Sarah Khan, business analyst and market researcher in Ilmenau, Germany. Dashboards, survey analysis and Python projects.">
+<meta name="description" content="Sarah Khan, business analyst and market researcher in Germany. Dashboards, survey analysis and Python projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Albert+Sans:ital,wght@0,300..700;1,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -323,10 +323,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <p class="mono rise">Business Analyst · Data &amp; Market Research · Ilmenau, Germany</p>
+          <p class="mono rise">Business Analyst · Data &amp; Market Research · Germany</p>
           <h1 class="rise">I read the <em>story</em> hidden in the data.</h1>
           <div class="hero-copy rise">
-            <p class="lede">I'm Sarah Khan. I turn customer behaviour, survey feedback and sales figures into recommendations that people act on. Trained in business in Karachi, now completing an M.Sc. in International Business Economics at TU Ilmenau.</p>
+            <p class="lede">I'm Sarah Khan. I turn customer behaviour, survey feedback and sales figures into recommendations that people act on. Trained in business in Karachi, now completing an M.Sc. in International Business Economics in Germany.</p>
             <div class="cta-row">
               <a class="btn btn-primary" href="#work">View the work</a>
               <a class="btn btn-ghost" href="#contact">Get in touch</a>
@@ -335,7 +335,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         </div>
         <div class="hero-side">
           <div class="ring-anchor" aria-hidden="true"></div>
-          <p class="hero-note"><strong>Currently:</strong> M.Sc. student at TU Ilmenau, open to working-student (Werkstudent) roles in analytics and market research, 20 hours a week.</p>
+          <p class="hero-note"><strong>Currently:</strong> M.Sc. student in Germany, open to working-student (Werkstudent) roles in analytics and market research, 20 hours a week.</p>
         </div>
       </div>
 
@@ -383,16 +383,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <div class="portrait reveal" id="portrait">
           <div class="plate" aria-hidden="true"></div>
           <div class="frame"><img src="assets/sarah.jpg" alt="Portrait of Sarah Khan" width="566" height="732" loading="lazy"></div>
-          <div class="tag">Karachi to Ilmenau</div>
         </div>
         <div class="about-text reveal">
           <p class="eyebrow mono">About</p>
           <h2 class="section-title">Curious about <em>why</em> people buy, switch and stay.</h2>
           <p>I started in business administration at the Institute of Business Management in Karachi and spent two years at <strong>Chemli Private Limited</strong>, first as a market research assistant and then as a customer insight analyst. There I ran pre-launch studies for new household products, analysed the behaviour of more than 20,000 customers, and presented recommendations to the board of directors.</p>
-          <p>In 2024 I moved to Germany for an <strong>M.Sc. in International Business Economics at Technische Universität Ilmenau</strong>. Alongside the degree I completed the IBM Data Analyst Professional Certificate and the AWS Cloud Practitioner exam, and I am now working through Stanford's Supervised Machine Learning course.</p>
+          <p>In 2024 I moved to Germany for an <strong>M.Sc. in International Business Economics</strong>. Alongside the degree I completed the IBM Data Analyst Professional Certificate and the AWS Cloud Practitioner exam, and I am now working through Stanford's Supervised Machine Learning course.</p>
           <p>What I enjoy most is the moment a messy survey export turns into a single chart that changes a decision.</p>
           <div class="facts">
-            <div class="fact"><span class="mono">Based in</span><div>Ilmenau, Thuringia, Germany</div></div>
+            <div class="fact"><span class="mono">Based in</span><div>Germany</div></div>
             <div class="fact"><span class="mono">Languages</span><div>English C1 · German B1 (in progress) · Urdu native</div></div>
             <div class="fact"><span class="mono">Education</span><div>M.Sc. International Business Economics (ongoing) · BBA (Hons)</div></div>
             <div class="fact"><span class="mono">Availability</span><div>Working-student roles, 20 h/week</div></div>
@@ -451,7 +450,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
             <div class="when">2024 – present</div>
             <div>
               <h3>M.Sc. International Business Economics</h3>
-              <div class="org">Technische Universität Ilmenau, Germany</div>
+              <div class="org">Technical university, Germany</div>
             </div>
           </article>
           <article class="tl edu">
@@ -579,7 +578,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
   <footer>
     <div class="wrap">
-      <span>Sarah Khan · Ilmenau, Germany · 2026</span>
+      <span>Sarah Khan · Germany · 2026</span>
       <span>Scene rendered live with Three.js</span>
     </div>
   </footer>
@@ -771,7 +770,7 @@ function readTheme(){
   const s=getComputedStyle(document.documentElement);
   C={ bg:new THREE.Color(s.getPropertyValue('--bg').trim()), saffron:new THREE.Color(s.getPropertyValue('--saffron').trim()), coral:new THREE.Color(s.getPropertyValue('--coral').trim()), teal:new THREE.Color(s.getPropertyValue('--teal').trim()), deep:new THREE.Color(s.getPropertyValue('--teal-deep').trim()), fg:new THREE.Color(s.getPropertyValue('--fg-2').trim()) };
   scene.fog=new THREE.Fog(C.bg, 14, 34);
-  if(ringMats) ringMats.forEach((m,i)=>m.color.copy([C.saffron,C.coral,C.teal,C.fg][i]));
+  if(ringMats.length) ringMats.forEach((m,i)=>m.color.copy([C.saffron,C.coral,C.saffron,C.teal][i]));
   if(lineMat) lineMat.color.copy(C.teal);
   if(pointMat) pointMat.color.copy(C.saffron);
   recolorBars(0);
@@ -839,11 +838,25 @@ function updateConstellation(t){
   lGeo.attributes.position.needsUpdate=true; lGeo.setDrawRange(0,n*2);
 }
 
-/* donut ring: four arcs, a 3D donut chart */
-const ring=new THREE.Group(); const shares=[0.42,0.26,0.2,0.12]; let ringMats=[]; let acc=0;
-shares.forEach((s,i)=>{ const arc=s*Math.PI*2-0.06; const g=new THREE.TorusGeometry(1.55,0.36,28,72,arc); const m=new THREE.MeshStandardMaterial({roughness:.35,metalness:.25}); ringMats.push(m); const mesh=new THREE.Mesh(g,m); mesh.rotation.z=acc+0.03; acc+=s*Math.PI*2; ring.add(mesh); });
-const tiltBase=small?0.55:1.05;
-ring.rotation.x=tiltBase; ring.rotation.y=-0.35; scene.add(ring);
+/* magnifying glass: metallic rim, glassy lens, handle with a collar */
+const ring=new THREE.Group(); let ringMats=[];
+const rimMat=new THREE.MeshStandardMaterial({roughness:.28,metalness:.85});
+const handleMat=new THREE.MeshStandardMaterial({roughness:.5,metalness:.1});
+const collarMat=new THREE.MeshStandardMaterial({roughness:.3,metalness:.8});
+const lensMat=new THREE.MeshPhysicalMaterial({roughness:.06,metalness:0,transparent:true,opacity:.28,clearcoat:1,clearcoatRoughness:.05,side:THREE.DoubleSide,depthWrite:false});
+ringMats=[rimMat,handleMat,collarMat,lensMat];
+const R=1.45;
+ring.add(new THREE.Mesh(new THREE.TorusGeometry(R,0.13,24,96),rimMat));
+ring.add(new THREE.Mesh(new THREE.CircleGeometry(R-0.08,64),lensMat));
+const handleDir=new THREE.Vector3(Math.cos(-Math.PI/4),Math.sin(-Math.PI/4),0);
+const collar=new THREE.Mesh(new THREE.CylinderGeometry(0.24,0.24,0.42,24),collarMat);
+collar.position.copy(handleDir).multiplyScalar(R+0.18); collar.rotation.z=Math.PI/4; ring.add(collar);
+const handle=new THREE.Mesh(new THREE.CylinderGeometry(0.16,0.2,2.1,24),handleMat);
+handle.position.copy(handleDir).multiplyScalar(R+0.38+1.05); handle.rotation.z=Math.PI/4; ring.add(handle);
+const cap=new THREE.Mesh(new THREE.SphereGeometry(0.2,24,16),collarMat);
+cap.position.copy(handleDir).multiplyScalar(R+0.38+2.1); ring.add(cap);
+const tiltBase=small?0.1:0.25;
+ring.rotation.x=tiltBase; scene.add(ring);
 
 /* place the ring in the hero's empty column by projecting a DOM element's centre into world space */
 const anchor=document.querySelector('.ring-anchor');
@@ -853,7 +866,7 @@ function placeRing(){
   ring.position.copy(camera.position).add(dir.multiplyScalar(dist));
   // size the ring to its anchor box: world units per pixel at this distance, times the box's smaller side
   const wpp=(2*dist*Math.tan(THREE.MathUtils.degToRad(camera.fov/2)))/innerHeight;
-  const diameter=Math.min(r.width,r.height)*0.82*wpp; ring.scale.setScalar(THREE.MathUtils.clamp(diameter/3.8,0.3,1.4));
+  const diameter=Math.min(r.width,r.height)*0.95*wpp; ring.scale.setScalar(THREE.MathUtils.clamp(diameter/4.6,0.3,1.4));
 }
 
 readTheme();
@@ -891,7 +904,7 @@ function frame(){
   updateBars(t*(reduced?0:1)); recolorBars(t);
   updateConstellation(reduced?0:t);
   placeRing();
-  ring.rotation.y=-0.35+t*0.18; ring.rotation.x=tiltBase+Math.sin(t*0.4)*0.08;
+  ring.rotation.y=t*0.55; ring.rotation.x=tiltBase+Math.sin(t*0.5)*0.12; ring.rotation.z=Math.sin(t*0.3)*0.08;
   renderer.render(scene,camera);
   if(!reduced) requestAnimationFrame(frame);
 }
