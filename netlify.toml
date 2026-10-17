@@ -1,0 +1,9 @@
+# Static site: no build step, serve the docs/ folder as the site root.
+[build]
+  publish = "docs"
+  command = ""
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
